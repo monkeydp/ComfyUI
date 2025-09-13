@@ -1,0 +1,23 @@
+{
+  "args": {
+    "cors_domains": [],
+    "fast": false,
+    "extra_args": "--max-upload-size 200"
+  },
+  "expert_settings": {},
+  "complexity": 2,
+  "network_preference": {
+    "proxy_address": "http://127.0.0.1:7868",
+    "proxy_git": true,
+    "proxy_pip": true,
+    "proxy_model_download": true,
+    "proxy_env": true,
+    "mirror_pypi": true,
+    "mirror_git": true,
+    "mirror_extension_list": true,
+    "mirror_huggingface": true,
+    "github_acceleration": true
+  },
+  "preferred_browser": "windows-default",
+  "disabled_hotfix": []
+}

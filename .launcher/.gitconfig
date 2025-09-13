@@ -1,0 +1,43 @@
+[core]
+fsmonitor = false
+longpaths = true
+[submodule]
+recurse = true
+fetchJobs = 0
+[fetch]
+parallel = 0
+[safe]
+directory = *
+[http]
+sslverify = true
+proxy = http://127.0.0.1:7868
+
+[url "https://jihulab.com/hanamizuki/stable-diffusion-webui"]
+    insteadOf = https://github.com/AUTOMATIC1111/stable-diffusion-webui
+    insteadOf = https://gitgud.io/AUTOMATIC1111/stable-diffusion-webui
+    insteadOf = https://jihulab.com/hunter0725/stable-diffusion-webui
+    insteadOf = https://jihulab.com/Scion6293/stable-diffusion-webui
+
+[url "https://jihulab.com/hanamizuki/comfyui"]
+    insteadOf = https://github.com/comfyanonymous/ComfyUI
+    insteadOf = https://ghproxy.com/https://github.com/comfyanonymous/ComfyUI
+    insteadOf = https://hub.fastgit.xyz/comfyanonymous/ComfyUI
+    insteadOf = https://hub.fastgit.org/comfyanonymous/ComfyUI
+    insteadOf = https://gitclone.com/github.com/comfyanonymous/ComfyUI
+    insteadOf = https://gitee.com/AIGODLIKE/ComfyUI
+
+[url "https://github.com/muerrilla/stable-diffusion-NPW"]
+    insteadOf = https://github.com/muerrilla/stable-diffusion-NPW
+    insteadOf = https://ghproxy.com/https://github.com/muerrilla/stable-diffusion-NPW
+    insteadOf = https://hub.fastgit.xyz/muerrilla/stable-diffusion-NPW
+    insteadOf = https://hub.fastgit.org/muerrilla/stable-diffusion-NPW
+    insteadOf = https://gitclone.com/github.com/muerrilla/stable-diffusion-NPW
+
+[url "https://jihulab.com/hanamizuki/stable-diffusion-webui-forge"]
+    insteadOf = https://github.com/lllyasviel/stable-diffusion-webui-forge
+    insteadOf = https://ghproxy.com/https://github.com/lllyasviel/stable-diffusion-webui-forge
+    insteadOf = https://hub.fastgit.xyz/lllyasviel/stable-diffusion-webui-forge
+    insteadOf = https://hub.fastgit.org/lllyasviel/stable-diffusion-webui-forge
+    insteadOf = https://gitclone.com/github.com/lllyasviel/stable-diffusion-webui-forge
+
+
