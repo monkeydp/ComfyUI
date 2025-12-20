@@ -209,15 +209,21 @@ class ExecutionList(TopologicalSort):
             self.execution_cache_listeners[from_node_id] = set()
         self.execution_cache_listeners[from_node_id].add(to_node_id)
 
-    def get_output_cache(self, from_node_id, to_node_id):
+    def get_cache(self, from_node_id, to_node_id):
         if not to_node_id in self.execution_cache:
             return None
-        return self.execution_cache[to_node_id].get(from_node_id)
+        value = self.execution_cache[to_node_id].get(from_node_id)
+        if value is None:
+            return None
+        #Write back to the main cache on touch.
+        self.output_cache.set(from_node_id, value)
+        return value
 
     def cache_update(self, node_id, value):
         if node_id in self.execution_cache_listeners:
             for to_node_id in self.execution_cache_listeners[node_id]:
-                self.execution_cache[to_node_id][node_id] = value
+                if to_node_id in self.execution_cache:
+                    self.execution_cache[to_node_id][node_id] = value
 
     def add_strong_link(self, from_node_id, from_socket, to_node_id):
         super().add_strong_link(from_node_id, from_socket, to_node_id)
